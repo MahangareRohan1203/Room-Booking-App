@@ -1,0 +1,27 @@
+
+spring:
+  jackson:
+    time-zone: "Asia/Kolkata"
+  mvc:
+    time-zone: "Asia/Kolkata"
+  datasource:
+    url: jdbc:postgresql://dpg-cvqkmf6uk2gs73dm0g80-a.singapore-postgres.render.com:5432/room_booking_db_ua59
+    username: room_booking_db_ua59_user
+    password: QvdNbn5bKGdBni5lU6JSBNoE4Xt1K82g
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Use validate in production to prevent unwanted schema changes now (update)
+#    show-sql: true       # Disable in prod to avoid SQL logging
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: "Asia/Kolkata"
+  application:
+    name: booking_system
+
+#spring.jpa.properties.hibernate.jdbc.time_zone=Asia/Kolkata
+#  spring.jackson.time-zone=Asia/Kolkata
+#  spring.mvc.timezone=Asia/Kolkata
